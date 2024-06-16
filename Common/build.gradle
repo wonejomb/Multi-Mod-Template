@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.gradle.userdev' version '7.0.143' apply false
+    id 'net.neoforged.gradle.vanilla' version '7.0.143'
+}
+
+group='your.mod.group'
+version="${mod_version}"
+base.archivesName="[${mc_version}]${mod_name}-${mod_version}-common"
+
+dependencies {
+    implementation "net.minecraft:client:${mc_version}"
+    compileOnly 'org.jetbrains:annotations:24.1.0'
+    compileOnly 'org.spongepowered:mixin:0.8.5'
+}
